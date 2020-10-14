@@ -1,0 +1,102 @@
+<html lang="es" xml:lang="es" xmlns:th="http://thymeleaf.org">
+<body>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<form th:action="@{/formulario}" method="post">
+	<div class="jumbotron">
+		<h1 class="display-4">Alta de usuario en revista online</h1>
+		<hr class="my-4">
+			<fieldset>
+				<legend>Datos personales</legend>
+				<div class="form-group">
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre" size="50" class="form-control" id="nombre" placeholder="Nombre">
+				</div>
+				<div class="form-group">
+					<label for="apellido">Primer Apellido:</label>
+					<input type="text" name="primerApe" size="50" class="form-control" id="apellido" placeholder="Apellido">
+				</div>
+				<div class="form-group">
+					<label for="apellido2">Segundo Apellido:</label>
+					<input type="text" name="segundoApe" size="50" class="form-control" id="apellido2" placeholder="Segundo Apellido">
+				</div>
+				<div class="form-group">
+					<label for="correoElec">Correo Electronico:</label>
+					<input type="text" name="eCorreo" size="50" class="form-control" id="correoElec" placeholder="email@email.com">
+				</div>
+				<div class="form-group">
+					<label for="fechaNac">Fecha de Nacimiento:</label>
+					<input type="date" name="nacido" size="50" class="form-control" id="fechaNac">
+				</div>
+				<div class="form-group">
+					<label for="contraeña">Contraseña</label>
+					<input type="password" name="password" size="50" class="form-control" id="contraeña">
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="hombre" name="hm" value="h" class="custom-control-input" checked="">
+					<label class="custom-control-label" for="hombre">Varón</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="mujer" name="hm" value="m" class="custom-control-input">
+					<label class="custom-control-label" for="mujer">Mujer</label>
+				</div>
+				<br/>
+				<div class="form-group">
+					<label for="localizacion">Direccion</label>
+					<input type="text" name="direccion" size="50" class="form-control" id="localizacion" placeholder="calle o plaza, número y piso">
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend> Nivel de estudios e intereses</legend>
+				<p>Nivel de estudios</p>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="titulo1" name="titulo" value="Certificado escolar" class="custom-control-input" checked="">
+					<label class="custom-control-label" for="titulo1">Certificado escolar</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="titulo2" name="titulo" value="Graduado en E.S.O" class="custom-control-input">
+					<label class="custom-control-label" for="titulo2">Graduado en E.S.O</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="titulo3" name="titulo" value="Bachiller - Formacion Profesional" class="custom-control-input">
+					<label class="custom-control-label" for="titulo3">Bachiller - Formacion Profesional</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="titulo4" name="titulo" value="Diplomado" class="custom-control-input">
+					<label class="custom-control-label" for="titulo4">Diplomado</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input type="radio" id="titulo5" name="titulo" value="Licenciado o Doctorado" class="custom-control-input">
+					<label class="custom-control-label" for="titulo5">Licenciado o Doctorado</label>
+				</div>
+				<br/>
+				<p>Recibir articulos sobre los siguientes temas</p>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="articulo1" name="articulo" value="Música">
+					<label class="custom-control-label" for="articulo1">Música</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="articulo2" name="articulo" value="Deportes">
+					<label class="custom-control-label" for="articulo2">Deportes</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="articulo3" name="articulo" value="Cine">
+					<label class="custom-control-label" for="articulo3">Cine</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="articulo4" name="articulo" value="articulo4">
+					<label class="custom-control-label" for="articulo4">Libros</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="articulo5" name="articulo" value="Ciencia">
+					<label class="custom-control-label" for="articulo5">Ciencia</label>
+				</div><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Enviar formulario</legend>
+				<p>¿Estas seguro de que los datos son correctos?</p>
+				<button type="submit" class="btn btn-primary" value=Enviar>Enviar</button>
+	  		</fieldset>
+	</div>
+</form>
+</body>
+</html>		
