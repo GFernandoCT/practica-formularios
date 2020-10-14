@@ -1,0 +1,42 @@
+<html lang="es" xml:lang="es" xmlns:th="http://www.thymeleaf.org">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<body>
+	<div class="jumbotron">
+		<h1 class="display-4">Calcula tu indice de grasa corporal</h1>
+		<hr class="my-4">
+		<form th:action="@{/calculadora}" method="post">
+			<fieldset>
+				<legend>Datos</legend>
+				<div class="form-group">
+					<label class="col-form-label" for="inputDefault">Peso</label>
+					<input type="number" name="peso" size="3" class="form-control" placeholder="Ejemplo: 80" id="inputDefault">
+					<small class="form-text text-muted">Peso en Kg truncados</small>
+					<label class="col-form-label" for="inputDefault">Altura</label>
+					<input type="number" name="altura" step="any" size="3" class="form-control" placeholder="Ejemplo: 1.70" id="inputDefault">
+					<small class="form-text text-muted">Altura en metros</small>
+					<label class="col-form-label" for="inputDefault">Edad:</label>
+					<input type="number" name="edad" size="2" class="form-control" placeholder="Ejemplo: 39" id="inputDefault">
+					<br/>
+					<p>Sexo:
+					<div class="custom-control custom-radio">
+						<input type="radio" id="customRadio1" name="hm" value="1" class="custom-control-input" checked="">
+						<label class="custom-control-label" for="customRadio1">Hombre</label>
+					</div>
+					<br/>
+					<div class="custom-control custom-radio">
+						<input type="radio" id="customRadio2" name="hm" value="0" class="custom-control-input" checked="">
+						<label class="custom-control-label" for="customRadio2">Mujer</label>
+					</div>
+					</p>
+				</div>
+			<p>
+				<button type="submit" class="btn btn-primary">Calcular</button>
+			</p>
+		</fieldset>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
